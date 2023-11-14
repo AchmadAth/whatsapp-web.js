@@ -51,12 +51,12 @@ client.on('ready', () => {
 
 client.on('message', async msg => {
     console.log('MESSAGE RECEIVED', msg);
-    if (msg.body!=null) {
+    if (msg.body != null) {
         query({"question": msg.body}).then((response) => {
             msg.reply(response);
         });
     }
-});
+}); 
 
 client.on('change_state', state => {
     console.log('CHANGE STATE', state);
